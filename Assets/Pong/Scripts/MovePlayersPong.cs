@@ -19,17 +19,17 @@ public class MovePlayersPong : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.W)) {
+		if (Input.GetKey (KeyCode.W)&& LeftPlayer.position.y <4.2) {
 			LeftPlayer.Translate (Vector2.up * Time.deltaTime * speed);
 
 		}
-		if (Input.GetKey (KeyCode.S)) {
+		if (Input.GetKey (KeyCode.S)&& LeftPlayer.position.y >-4.2) {
 			LeftPlayer.Translate (Vector2.down * Time.deltaTime * speed);
 		}
-		if (Input.GetKey (KeyCode.UpArrow)) {
+		if (Input.GetKey (KeyCode.UpArrow)&& RightPlayer.position.y <4.2) {
 			RightPlayer.Translate (Vector2.up * Time.deltaTime * speed);
 		}
-		if (Input.GetKey (KeyCode.DownArrow)) {
+		if (Input.GetKey (KeyCode.DownArrow)&& RightPlayer.position.y >-4.2) {
 			RightPlayer.Translate (Vector2.down * Time.deltaTime * speed);
 		}
 	}

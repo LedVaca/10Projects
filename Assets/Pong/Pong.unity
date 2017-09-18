@@ -252,6 +252,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &635234877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 635234879}
+  - component: {fileID: 635234878}
+  m_Layer: 0
+  m_Name: Control_Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &635234878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 635234877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e057b4a5e9a9b49a72fe54b58aa54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  RightPlayer: {fileID: 1623563623}
+  LeftPlayer: {fileID: 1065485118}
+--- !u!4 &635234879
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 635234877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897986386
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e954cb7688a03544a8a5d8d07e2af24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
 --- !u!61 &1065485120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -570,7 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35897c43acac7f4aaa4ca0083895e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
 --- !u!212 &1623563622
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -861,8 +902,8 @@ GameObject:
   - component: {fileID: 2111803959}
   - component: {fileID: 2111803958}
   - component: {fileID: 2111803960}
-  - component: {fileID: 2111803961}
   - component: {fileID: 2111803962}
+  - component: {fileID: 2111803961}
   m_Layer: 0
   m_Name: Pelota
   m_TagString: Untagged
@@ -940,7 +981,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 06115b573165c414eb165a99120a995b, type: 2}
+  m_Material: {fileID: 6200000, guid: 684ae8ac326dd2d4d84e1020e4291b52, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -953,7 +994,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2111803957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d14acf46b9049ca43a4725b7403a9382, type: 3}
+  m_Script: {fileID: 11500000, guid: e7381bddbfd91ba439c7509fbb9e06d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!58 &2111803962

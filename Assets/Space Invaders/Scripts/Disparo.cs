@@ -16,7 +16,7 @@ public class Disparo : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetButton ("Fire1") ){
+		if (Input.GetKey(KeyCode.Space)){
 			Instantiate(shot, shotspawner.position, Quaternion.identity);
 
 		}

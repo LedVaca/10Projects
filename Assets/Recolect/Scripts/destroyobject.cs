@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class destroyobj : MonoBehaviour {
+public class destroyobject : MonoBehaviour {
 	private int count;
 	public Text countText;
 	public Text win;
