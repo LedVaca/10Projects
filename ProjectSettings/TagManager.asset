@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - points
+  - En1
+  - En2
+  - EnB
   layers:
   - Default
   - TransparentFX
