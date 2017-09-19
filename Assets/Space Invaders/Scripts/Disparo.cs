@@ -10,6 +10,8 @@ public class Disparo : MonoBehaviour {
 	public Transform shotspawner;
 	private float nextf;
 	private float ratef = 0.5f;
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,10 +20,11 @@ public class Disparo : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKey(KeyCode.Space)&& Time.time > nextf){
+		if (Input.GetKey (KeyCode.Space) && Time.time > nextf) {
 			nextf = Time.time + ratef;
-			Instantiate(shot, shotspawner.position, Quaternion.identity);
+			Instantiate (shot, shotspawner.position, Quaternion.identity);
 
 		}
 	}
+
 } 

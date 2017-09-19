@@ -8,6 +8,7 @@ public class destroyobject : MonoBehaviour {
 	public Text countText;
 	public Text win;
 
+
 	// Use this for initialization
 		void Start () {
 		int count = 0;
@@ -26,8 +27,9 @@ public class destroyobject : MonoBehaviour {
 
 		countText.text = "Score: " + count;
 	
-
-	//}
+		if (count == 10){
+			countText.text= " You Win";
+	}
 
 }
 

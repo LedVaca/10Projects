@@ -8,6 +8,7 @@ TagManager:
   - En1
   - En2
   - EnB
+  - Bullet
   layers:
   - Default
   - TransparentFX
