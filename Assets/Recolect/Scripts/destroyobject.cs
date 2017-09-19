@@ -29,6 +29,7 @@ public class destroyobject : MonoBehaviour {
 	
 		if (count == 10){
 			countText.text= " You Win";
+			Destroy(this.gameObject);
 	}
 
 }
