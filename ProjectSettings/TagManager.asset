@@ -10,6 +10,9 @@ TagManager:
   - EnB
   - Bullet
   - Pelota
+  - Score1
+  - Score2
+  - Ball
   layers:
   - Default
   - TransparentFX
