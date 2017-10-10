@@ -42,5 +42,9 @@ public class Juugador : MonoBehaviour {
 		Acumularfuerza = 0;
 
 	}
+	void OnCollisionEnter (Collision other)
+	{
+		Debug.Log ("Lo toca");
+	}
 
 }
