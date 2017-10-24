@@ -6,6 +6,8 @@ public class Juugador : MonoBehaviour {
 
 	[SerializeField] float Acumularfuerza = 0;
 	[SerializeField] private GameObject stepPrefab;
+	private float currentx = - 7f;
+	private float currenty = 5f;
 
 
 	private bool jump;
@@ -13,6 +15,7 @@ public class Juugador : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
+
 
 	}
 	
@@ -44,7 +47,17 @@ public class Juugador : MonoBehaviour {
 	}
 	void OnCollisionEnter (Collision other)
 	{
-		Debug.Log ("Lo toca");
-	}
+		if (other.transform.CompareTag("Ball")){
+			Debug.Log ("Lo toca");
+			Vector3 ran = new Vector3 (currentx,currenty, 0);
+			currentx += -7f;
+			currenty += 5f;
+			Instantiate (stepPrefab,ran,Quaternion.identity);
+		}
 
+	}
+	void OnCollisionExit (Collision other){
+		Destroy(other.gameObject);
+	}
 }
+
