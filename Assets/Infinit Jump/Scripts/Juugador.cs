@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Juugador : MonoBehaviour {
 
 	[SerializeField] float Acumularfuerza = 0;
 	[SerializeField] private GameObject stepPrefab;
+	[SerializeField] private Text scor;
 	private float currentx = - 7f;
 	private float currenty = 5f;
+	private int plat;
 
 
 	private bool jump;
@@ -15,12 +17,14 @@ public class Juugador : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
-
-
+		plat = 0;
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		scor.text = "Score : " + plat;
+
 		if (Input.GetKey (KeyCode.Space)&& !jump) {
 			Acumularfuerza += 10;
 		}
@@ -48,16 +52,15 @@ public class Juugador : MonoBehaviour {
 	void OnCollisionEnter (Collision other)
 	{
 		if (other.transform.CompareTag("Ball")){
-			Debug.Log ("Lo toca");
+			currentx += -5.6f;
+			currenty += 3f;
 			Vector3 ran = new Vector3 (currentx,currenty, 0);
-			currentx += -7f;
-			currenty += 5f;
 			Instantiate (stepPrefab,ran,Quaternion.identity);
+			plat += 100;
 		}
 
 	}
-	void OnCollisionExit (Collision other){
-		Destroy(other.gameObject);
-	}
+
+
 }
 

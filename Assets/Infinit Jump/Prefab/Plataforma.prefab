@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33677772008161262}
   - component: {fileID: 65051953878451764}
   - component: {fileID: 23942560034423066}
+  - component: {fileID: 114669946509120802}
   m_Layer: 0
   m_Name: Plataforma
   m_TagString: Ball
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1357512610438364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: 1.69, z: 0}
+  m_LocalPosition: {x: -6.41, y: 4.47, z: 0.024}
   m_LocalScale: {x: 2.379882, y: 0.25626415, z: 4.2661614}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,5 +92,16 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.96, y: 0.36, z: 1}
+  m_Center: {x: 0, y: 0.42, z: 0}
+--- !u!114 &114669946509120802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1357512610438364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19192a85505d3ee44a208e7972f7f352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
