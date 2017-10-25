@@ -56,7 +56,7 @@ public class Juugador : MonoBehaviour {
 			currenty += 3f;
 			Vector3 ran = new Vector3 (currentx,currenty, 0);
 			Instantiate (stepPrefab,ran,Quaternion.identity);
-			plat += 100;
+			plat += 10;
 		}
 
 	}
