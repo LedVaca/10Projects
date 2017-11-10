@@ -13,6 +13,8 @@ TagManager:
   - Score1
   - Score2
   - Ball
+  - Coin_FB
+  - Enemigo_FB
   layers:
   - Default
   - TransparentFX
