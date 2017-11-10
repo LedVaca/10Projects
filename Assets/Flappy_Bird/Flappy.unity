@@ -108,36 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &160392276 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1551894904664766, guid: 6a7b48b2e09b44f45bf15ebdd907aa71,
-    type: 2}
-  m_PrefabInternal: {fileID: 1397303946}
---- !u!61 &160392280
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 160392276}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.88, y: 0.09}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.3346933, y: 0.26889986}
-    oldSize: {x: 3.3899999, y: 2.6399999}
-    newSize: {x: 3.3899999, y: 2.6399999}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.25, y: 1.55}
-  m_EdgeRadius: 0
 --- !u!1 &1214331160
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,11 +206,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4224258549542712, guid: 6a7b48b2e09b44f45bf15ebdd907aa71, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.27294
       objectReference: {fileID: 0}
     - target: {fileID: 4224258549542712, guid: 6a7b48b2e09b44f45bf15ebdd907aa71, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.29716
       objectReference: {fileID: 0}
     - target: {fileID: 4224258549542712, guid: 6a7b48b2e09b44f45bf15ebdd907aa71, type: 2}
       propertyPath: m_LocalPosition.z
@@ -265,6 +235,11 @@ Prefab:
     - target: {fileID: 4224258549542712, guid: 6a7b48b2e09b44f45bf15ebdd907aa71, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114993734087912042, guid: 6a7b48b2e09b44f45bf15ebdd907aa71,
+        type: 2}
+      propertyPath: jumpForce
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a7b48b2e09b44f45bf15ebdd907aa71, type: 2}
