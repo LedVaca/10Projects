@@ -15,6 +15,7 @@ TagManager:
   - Ball
   - Coin_FB
   - Enemigo_FB
+  - Tubo_FB
   layers:
   - Default
   - TransparentFX

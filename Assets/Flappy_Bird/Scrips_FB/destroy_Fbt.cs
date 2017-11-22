@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Des_bull : MonoBehaviour {
-	
-	// Use this for initialization
-	void Start () {
-		
 
+public class destroy_Fbt : MonoBehaviour {
+
+
+
+	// Use this for initialization
+		void Start () {
+		
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.CompareTag ("Bullet")) {
-			Destroy (other.gameObject);
-		
-
-		}
+		void OnTriggerEnter2D(Collider2D other) {
+		Destroy (other.gameObject);
+	
 
 	}
+
 }
+
+
+
