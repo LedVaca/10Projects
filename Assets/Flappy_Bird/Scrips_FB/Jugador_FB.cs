@@ -9,12 +9,16 @@ public class Jugador_FB : MonoBehaviour {
 	public	float jumpForce = 100f;
 	private int count;
 	public Text countText;
+	public GameObject GameOverText;
+	public GameObject GameOverImage;
 
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		int count = 0;
 		countText.text= "Score: " + count;
+		GameOverImage.SetActive (false);
+		GameOverText.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -35,6 +39,10 @@ public class Jugador_FB : MonoBehaviour {
 		}
 		if (other.CompareTag ("Enemigo_FB")) {
 			Time.timeScale = 0;
+			GameOverImage.SetActive(true);
+			GameOverText.SetActive(true);
+			//RawImage.
+
 
 		}
 
