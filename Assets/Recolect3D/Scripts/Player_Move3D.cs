@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Move_Player : MonoBehaviour {
+public class Player_Move3D : MonoBehaviour {
 	private Transform mytrans; 
 	public float speed; 
 	private int count;
