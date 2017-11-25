@@ -4,35 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Player_Move3D : MonoBehaviour {
-	private Transform mytrans; 
+	private Transform posi; 
 	public float speed; 
 	private int count;
+	public GameObject GameOverText3D;
+	public GameObject GameOverImage3D;
 	public Text countText;
-	public Text win;
+	private Transform positt;
 
 
 	// Use this for initialization
 	void Start () {
-		mytrans = GetComponent <Transform> ();
-		speed = 5;
+		positt = GetComponent <Transform> ();
+		speed = 8;
 		int count = 0;
-		countText.text= "Score: " + count;
+		countText.text= "Score : " + count;
+		GameOverImage3D.SetActive (false);
+		GameOverText3D.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update (){
 		if (count < 10){
 			if (Input.GetKey(KeyCode.A)){
-				mytrans.Translate (new Vector2 (-speed,0 ) * Time.deltaTime);
+				positt.Translate (Vector3.left* Time.deltaTime * speed);
 			}
-					if (Input.GetKey(KeyCode.D)){
-						mytrans.Translate (new Vector2 (speed,0) * Time.deltaTime);
+				if (Input.GetKey(KeyCode.D)){
+				positt.Translate (Vector3.right* Time.deltaTime * speed);
 					}
-						if (Input.GetKey(KeyCode.W)){
-							mytrans.Translate (new Vector2 (0,speed) * Time.deltaTime);
+				if (Input.GetKey(KeyCode.W)){
+				positt.Translate (Vector3.forward* Time.deltaTime * speed);
 						}
-							if (Input.GetKey(KeyCode.S)){
-								mytrans.Translate (new Vector2 (0,-speed) * Time.deltaTime);
+				if (Input.GetKey(KeyCode.S)){
+				positt.Translate (Vector3.back* Time.deltaTime * speed);
 							}
 
 		}
@@ -47,10 +51,11 @@ public class Player_Move3D : MonoBehaviour {
 
 
 
-		countText.text = "Score: " + count;
+		countText.text = "Score : " + count;
 
 		if (count == 10){
-			countText.text= " You Win";
+			GameOverImage3D.SetActive (true);
+			GameOverText3D.SetActive (true);
 
 		}
 
