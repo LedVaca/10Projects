@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class Time : MonoBehaviour {
+public class Time_Runner : MonoBehaviour {
 	public Text times;
 	private float timessnum;
 	// Use this for initialization
