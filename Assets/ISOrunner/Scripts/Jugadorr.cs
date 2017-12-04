@@ -42,6 +42,15 @@ public class Jugadorr : MonoBehaviour {
 		jump = false;
 
 	}
+	void OnTriggerEnter(Collider other){
+		if (other.gameObject.CompareTag ("Enemigo_FB")) {
+
+			Destroy (gameObject);
+
+
+			Time.timeScale=0;
+		}
+	}
 		
 
 
