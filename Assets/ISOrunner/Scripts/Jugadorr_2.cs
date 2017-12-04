@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jugadorr : MonoBehaviour {
+public class Jugadorr_2 : MonoBehaviour {
 
 	[SerializeField] float speedd;
 	private Rigidbody rb;
@@ -20,15 +20,15 @@ public class Jugadorr : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.A)) {
+		if (Input.GetKey (KeyCode.LeftArrow)) {
 			transform.Translate (Vector3.left* UnityEngine.Time.deltaTime * speedd);
 
 		}
-		if (Input.GetKey (KeyCode.D)) {
+		if (Input.GetKey (KeyCode.RightArrow)) {
 			transform.Translate (Vector3.right * UnityEngine.Time.deltaTime * speedd);
 		}
 
-		if (Input.GetKeyDown (KeyCode.Space)&& !jump){
+		if (Input.GetKeyDown (KeyCode.UpArrow)&& !jump){
 			rb.AddForce (Vector3.up * jumpForce, ForceMode.Impulse);
 
 
@@ -44,7 +44,10 @@ public class Jugadorr : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.CompareTag ("Enemigo_FB")) {
+
 			Destroy (gameObject);
+
+
 			Time.timeScale=0;
 		}
 	}
