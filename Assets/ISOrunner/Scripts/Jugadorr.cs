@@ -1,21 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Jugadorr : MonoBehaviour {
 
 	[SerializeField] float speedd;
 	private Rigidbody rb;
 	private	float jumpForce = 50;
 	private  bool jump ;
-
-
+	public Text gameO;
+	public GameObject GameOverImage;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
 
 		speedd = 7f;
-
+		GameOverImage.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -46,6 +46,8 @@ public class Jugadorr : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Enemigo_FB")) {
 			Destroy (gameObject);
 			Time.timeScale=0;
+			gameO.text = ("Game Over");
+			GameOverImage.SetActive(true);
 		}
 	}
 		
