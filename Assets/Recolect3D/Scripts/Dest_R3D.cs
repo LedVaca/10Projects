@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class destroyobject : MonoBehaviour {
+public class Dest_R3D : MonoBehaviour {
 	private int count;
 	public Text countText;
 	public Text win;
+	[SerializeField] Text Over;
+
 
 
 	// Use this for initialization
@@ -18,13 +20,13 @@ public class destroyobject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-
+		if (this.transform.position.y < 0) {
+			Destroy (gameObject);
+			Over.text = "Game Over";
+			Debug.Log ("Muere");
 		}
-
-
-		void OnTriggerEnter (Collider other)
-	{
+	}
+		void OnTriggerEnter(Collider other) {
 		Destroy (other.gameObject);
 		count = count + 1;
 		
@@ -32,16 +34,12 @@ public class destroyobject : MonoBehaviour {
 
 		countText.text = "Score: " + count;
 	
-		if (count == 10) {
-			countText.text = " You Win";
-			Destroy (this.gameObject);
-
-	
-		}
+		if (count == 10){
+			
+			Destroy(this.gameObject);
 	}
+
 }
 
-
-
-
+}
 
