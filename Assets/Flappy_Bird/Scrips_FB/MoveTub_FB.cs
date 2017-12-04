@@ -6,7 +6,7 @@ public class MoveTub_FB : MonoBehaviour {
 
 
 	private Rigidbody2D rb2d;
-	public float velocidad = -1.5f;
+	public float velocidad = -4;
 
 	private	void Awake () {
 		rb2d = GetComponent<Rigidbody2D> ();

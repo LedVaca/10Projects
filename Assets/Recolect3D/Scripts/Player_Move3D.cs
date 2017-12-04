@@ -10,13 +10,13 @@ public class Player_Move3D : MonoBehaviour {
 	public GameObject GameOverText3D;
 	public GameObject GameOverImage3D;
 	public Text countText;
-	private Transform positt;
+	private Rigidbody positt;
 
 
 	// Use this for initialization
 	void Start () {
-		positt = GetComponent <Transform> ();
-		speed = 8;
+		positt = GetComponent <Rigidbody> ();
+		speed = 400;
 		int count = 0;
 		countText.text= "Score : " + count;
 		GameOverImage3D.SetActive (false);
@@ -27,23 +27,20 @@ public class Player_Move3D : MonoBehaviour {
 	void Update (){
 		if (count < 10){
 			if (Input.GetKey(KeyCode.A)){
-				positt.Translate (Vector3.left* Time.deltaTime * speed);
+				positt.AddForce (Vector3.left* Time.deltaTime * speed);
 			}
 				if (Input.GetKey(KeyCode.D)){
-				positt.Translate (Vector3.right* Time.deltaTime * speed);
+				positt.AddForce (Vector3.right* Time.deltaTime * speed);
 					}
 				if (Input.GetKey(KeyCode.W)){
-				positt.Translate (Vector3.forward* Time.deltaTime * speed);
+				positt.AddForce (Vector3.forward* Time.deltaTime * speed);
 						}
 				if (Input.GetKey(KeyCode.S)){
-				positt.Translate (Vector3.back* Time.deltaTime * speed);
+				positt.AddForce (Vector3.back* Time.deltaTime * speed);
 							}
 
 		}
-		if(count == 10){
-			countText.text= " You Win";
-
-		}
+	
 	}
 	void OnTriggerEnter(Collider other) {
 		Destroy (other.gameObject);
